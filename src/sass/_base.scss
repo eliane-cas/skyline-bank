@@ -1,0 +1,80 @@
+// custom fonts
+@font-face {
+  font-family: "Maxima Nouva Font";
+  src: url("../assets/font/MaximaNouva-Regular-BF66ecec96953e0.otf");
+  font-weight: 500;
+  font-family: "Maxbeland Font Family";
+  src: url("../assets/font/Maxbeland-Regular-BF66f36a427ec99.otf");
+  font-weight: 500;
+  font-family: "Helvetica Now Font Family";
+  src: url("../assets/font/helveticanowtext-bold-demo.ttf");
+  font-weight: 500;
+}
+
+:root {
+  // --color-primary: #17ff87;
+  --color-primary: #97ef13;
+  --color-primary-grey-dark: #3b4a3f;
+  --color-primary-grey-light: #9eafa2;
+
+  --color-secondary: #00ffff;
+  --color-secondary-dark: #00cacc;
+
+  --color-grey-light-5: #faf9f9;
+  --color-grey-light-1: #f5f2eb;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #484848;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+}
+
+$bp-largest: 75em; // 1200px 1200px/16
+$bp-large: 68.7em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 46.88em; // 750px
+$bp-smaller: 40.63em; // 650px
+$bp-smallest: 34.38em; // 550px
+$bp-mini: 28.13em; //
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  font-family: "Maxima Nouva Font", sans-serif;
+  //   font-family: "Maxbeland Font Family", sans-serif;
+  //   font-family: "Helvetica Now Font Family", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  position: relative;
+  background-color: var(--color-grey-light-1);
+  letter-spacing: 0.08rem;
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+  min-height: 50rem;
+  max-width: 140rem;
+  display: block;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 160rem;
+}

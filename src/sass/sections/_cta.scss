@@ -1,0 +1,31 @@
+.cta-desc {
+  font-size: 1.7rem;
+  width: 70%;
+  line-height: 2.5rem;
+  margin-bottom: 0rem;
+  color: var(--color-grey-dark-1);
+}
+
+.btn-cta-2 {
+  margin-bottom: 10rem;
+}
+
+.cta-1 {
+  background-image: url(../../assets/img/SVG/backshape.svg);
+  background-repeat: no-repeat;
+  background-position: 80%;
+}
+
+.section_cta2 {
+  background-size: 100vw;
+  background-position: 35%;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+    ellipse,
+    rgba(151, 239, 19, 0.7044931620108981) 0%,
+    rgba(245, 242, 235, 1) 42%,
+    rgba(245, 242, 235, 1) 64%,
+    rgba(245, 242, 235, 1) 94%,
+    rgba(245, 242, 235, 1) 96%
+  );
+}

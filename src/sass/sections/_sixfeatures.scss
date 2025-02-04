@@ -1,0 +1,99 @@
+.section {
+  max-width: 140rem;
+  margin-top: 20rem;
+
+  background-color: var(--color-grey-light-1);
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 15rem;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    margin-top: 10rem;
+  }
+}
+
+.section-6 {
+  // background-size: 40%;
+
+  background-image: url(../../assets/img/SVG/backshape2.svg);
+  background-repeat: no-repeat;
+}
+
+.grid_features {
+  max-width: 100rem;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  grid-gap: 3rem;
+  grid-auto-rows: minmax(200px, 1fr);
+  margin-bottom: 3rem;
+  justify-content: space-evenly;
+}
+
+.feature_card {
+  letter-spacing: 0.08rem;
+  border: 2px solid var(--color-grey-light-4);
+  border-radius: 10%;
+  padding: 3.5rem 1.5rem;
+  background-color: var(--color-grey-light-5);
+  font-size: 1.4rem;
+  transition: all 0.4s;
+
+  &:hover {
+    background-image: linear-gradient(
+      to top right,
+      #17ff87,
+      var(--color-grey-light-5)
+    );
+    border: 2px solid var(--color-grey-light-5);
+    transform: scale(1.03) translateY(-2px);
+  }
+}
+
+.feature-icon {
+  margin: 0 auto;
+  width: 5rem;
+  height: 5.3rem;
+  margin-bottom: 1rem;
+
+  background-color: var(--color-primary);
+  background-image: linear-gradient(
+    to top right,
+    var(--color-primary),
+    green,
+    black
+  );
+  mask-size: cover;
+}
+
+.Rocket {
+  mask-image: url(../../assets/img/SVG/rocket.svg);
+}
+
+.Bell {
+  mask-image: url(../../assets/img/SVG/bell-o.svg);
+}
+.Globe {
+  mask-image: url(../../assets/img/SVG/globe.svg);
+}
+.Target {
+  mask-image: url(../../assets/img/SVG/target.svg);
+}
+.Graph {
+  mask-image: url(../../assets/img/SVG/stats.svg);
+}
+.Lock {
+  mask-image: url(../../assets/img/SVG/lock-closed.svg);
+}
+
+.feature-title {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+  // line-height: 2rem;
+}

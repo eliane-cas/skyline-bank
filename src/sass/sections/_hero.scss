@@ -1,0 +1,175 @@
+.hero {
+  max-width: 140rem;
+  //   background-color: var(--color-grey-light-1);
+  //test
+  //   height: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-heading {
+  font-size: 11rem;
+  font-weight: 100;
+  letter-spacing: 0.7rem;
+  margin-top: 5rem;
+  background: linear-gradient(to right, #17ff87 10%, black, #17ff87 90%);
+  background-clip: text;
+  color: transparent;
+  line-height: 12.5rem;
+  animation: heading-move 5s ease-in-out infinite, appearBottom 1.5s ease-in-out;
+
+  background-size: 200% auto;
+  -webkit-text-fill-color: transparent;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 10rem;
+    line-height: 10rem;
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 9rem;
+    line-height: 9rem;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 8rem;
+    line-height: 8rem;
+  }
+}
+
+@keyframes heading-move {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes appearBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.hero-subheading {
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 0.3rem;
+  padding: 0 1rem;
+  opacity: 0;
+
+  animation: appearBottom 2s forwards 0.2s;
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.8rem;
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 1.5rem;
+  }
+}
+
+.btn-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: appearItem 0.5s forwards 1.5s;
+}
+
+@keyframes appearItem {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+.hero-img {
+  // background-image: url(../../assets/img/SVG/undraw_online_transactions_-02-ka.svg);
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  height: 50rem;
+  width: 50rem;
+  margin: 0 auto;
+
+  & img {
+    object-fit: contain;
+    max-width: 100%;
+  }
+  // margin-top: 6rem;
+
+  @media only screen and (max-width: $bp-smaller) {
+    height: 45rem;
+    width: 45rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 40rem;
+    height: 40rem;
+  }
+  @media only screen and (max-width: $bp-mini) {
+    width: 35rem;
+    height: 35rem;
+  }
+  @media only screen and (max-width: 350px) {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat_item {
+  width: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  padding: 2rem 6rem;
+  color: var(--color-grey-dark-2);
+}
+
+.stat-icon {
+  background-size: contain;
+  height: 3rem;
+  width: 3rem;
+  filter: opacity(0.5);
+}
+
+.stat-num {
+  font-size: 1.5rem;
+}
+
+.icon-group {
+  background-image: url(../../assets/img/SVG/group.svg);
+}
+.icon-clock {
+  background-image: url(../../assets/img/SVG/stopwatch.svg);
+}
+.icon-headset {
+  background-image: url(../../assets/img/SVG/headphones.svg);
+}
+.icon-dollar {
+  background-image: url(../../assets/img/SVG/dollar.svg);
+}
+.icon-shield {
+  background-image: url(../../assets/img/SVG/shield.svg);
+}
+
+.stat-text {
+  line-height: 1rem;
+  text-transform: uppercase;
+}

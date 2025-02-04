@@ -1,0 +1,36 @@
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translate(-2px, -2px);
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+
+  &:hover {
+    background-color: var(--color-primary);
+    box-shadow: 10px 5px 5px black;
+  }
+}
+
+.btn-fill {
+  background-color: black;
+  color: white;
+
+  &:hover {
+    box-shadow: 10px 5px 5px var(--color-primary);
+    color: var(--color-primary);
+  }
+}

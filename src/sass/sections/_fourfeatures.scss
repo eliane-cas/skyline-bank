@@ -1,0 +1,97 @@
+.section-4 {
+  background-size: 80%;
+  background-position: right;
+
+  background-repeat: no-repeat;
+  background-image: url(../../assets/img/SVG/backshape2.svg);
+}
+.grid_features-b {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 80rem;
+  width: 90%;
+  grid-gap: 2rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-item {
+  // border: 2px solid var(--color-grey-dark-3);
+  position: relative;
+  background-color: var(--color-grey-light-5);
+  // $border: 3px;
+  //
+  // border-radius: 5%;
+  // background-clip: padding-box !important;
+  // border: solid $border transparent;
+  // width: 90%;
+  padding: 3.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  border-radius: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    border: 5px solid transparent;
+    background: linear-gradient(
+        140deg,
+        var(--color-primary),
+        #17ff87,
+        black,
+        var(--color-primary)
+      )
+      border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
+}
+
+.grid-item-large {
+  grid-column: span 2;
+  @media only screen and (max-width: $bp-small) {
+    grid-column: span 1;
+  }
+}
+
+.grid-item-img {
+  height: 20rem;
+  object-fit: contain;
+  align-self: center;
+
+  &-large {
+    max-width: 40rem;
+    object-fit: contain;
+    align-self: center;
+    @media only screen and (max-width: $bp-smallest) {
+      max-width: 35rem;
+    }
+    @media only screen and (max-width: $bp-mini) {
+      max-width: 30rem;
+    }
+    @media only screen and (max-width: 370px) {
+      max-width: 25rem;
+    }
+  }
+}
+
+.grid-item-desc {
+  text-align: left;
+  font-size: 1.4rem;
+  color: var(--color-grey-dark-1);
+}
+
+.grid-item-title {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  color: var(--color-grey-dark-1);
+}
