@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const CTA2 = () => {
   return (
     <section className="section section_cta2">
@@ -6,8 +8,13 @@ export const CTA2 = () => {
         Join thousands who trust Skyline Bank to manage their finances smarter.
       </p>
       <div className="btn-container btn-cta btn-cta-2">
-        <button className="btn btn-outline">Start</button>
-        <button className="btn btn-fill">Open Your Account Today</button>
+        <Link to="/bankinfo">
+          {" "}
+          <button className="btn btn-outline">Start</button>
+        </Link>
+        <Link to="/bankinfo">
+          <button className="btn btn-fill">Open Your Account Today</button>
+        </Link>
       </div>
     </section>
   );
