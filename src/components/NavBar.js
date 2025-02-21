@@ -2,6 +2,8 @@ import React from "react";
 import logo from "../assets/img/logo-sky.png";
 import { Hamburger } from "./Hamburger";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -10,14 +12,34 @@ export const Navbar = () => {
     setHamburgerOpen(!hamburgerOpen);
   };
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (event, sectionId) => {
+    event.preventDefault();
+
+    if (location.pathname === "/") {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate(`/#${sectionId}`);
+    }
+  };
+
   return (
     <header className="header">
-      <img className="header_logo" src={logo}></img>
+      <Link to="/">
+        <img className="header_logo" src={logo}></img>
+      </Link>
+
       <nav className="headernav">
         <ul className="header-nav">
           <li className="header-nav__item">
             <a
-              href="#"
+              href="
+              /#"
               class="header-nav__link
           "
             >
@@ -26,7 +48,8 @@ export const Navbar = () => {
           </li>
           <li className="header-nav__item">
             <a
-              href="#features"
+              href="/#features"
+              onClick={(e) => handleNavigation(e, "features")}
               class="header-nav__link
           "
             >
@@ -35,7 +58,8 @@ export const Navbar = () => {
           </li>
           <li className="header-nav__item">
             <a
-              href="#pricing"
+              href="/#pricing"
+              onClick={(e) => handleNavigation(e, "pricing")}
               class="header-nav__link
           "
             >
@@ -48,8 +72,12 @@ export const Navbar = () => {
         <Hamburger isOpen={hamburgerOpen} />
       </div>
       <div className="header_CTA">
-        <button className="btn btn-outline">Log in</button>
-        <button className="btn btn-fill">Get Started</button>
+        <Link to="/bankinfo">
+          <button className="btn btn-outline">Log in</button>
+        </Link>
+        <Link to="/bankinfo">
+          <button className="btn btn-fill">Get Started</button>
+        </Link>
       </div>
       <style jsx>{`
         @media (max-width: 767px) {

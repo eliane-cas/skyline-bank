@@ -1,5 +1,6 @@
 import React from "react";
 import heroimg from "../assets/img/credit-card.gif";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -11,8 +12,12 @@ export const Hero = () => {
         Banking Built for the Modern World – Secure, Fast, and Flexible.
       </h2>
       <div className="btn-container">
-        <button className="btn btn-fill">Request a free demo</button>
-        <button className="btn btn-outline">Get started</button>
+        <Link to="/bankinfo">
+          <button className="btn btn-fill">Request a free demo</button>
+        </Link>
+        <Link to="/bankinfo">
+          <button className="btn btn-outline">Get started</button>
+        </Link>
       </div>
 
       <div className="hero-img">

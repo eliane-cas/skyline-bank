@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const CTA = () => {
   return (
     <section className="section cta-1">
@@ -9,8 +11,12 @@ export const CTA = () => {
         today.
       </p>
       <div className="btn-container btn-cta">
-        <button className="btn btn-outline">Start</button>
-        <button className="btn btn-fill">Join Skyline Bank Now</button>
+        <Link to="/bankinfo">
+          <button className="btn btn-outline">Start</button>
+        </Link>
+        <Link to="/bankinfo">
+          <button className="btn btn-fill">Join Skyline Bank Now</button>
+        </Link>
       </div>
     </section>
   );
